@@ -1,7 +1,11 @@
 //Calling and creating the function for pulling data from the COVID API
 $(document).ready(initialize);
 
-function initialize() {    
+function initialize() { 
+    
+    $("#shamwow").click(function(){
+        getData();
+    });
 //Making the data update every 10,000 milliseconds (10 seconds)
 // setInterval(getData, 10000);
  }
@@ -13,7 +17,7 @@ function initialize() {
 // //     window.location.reload();
 // // }
 
-getData();
+
 async function getData(){
     const api_url = 'https://corona-api.com/countries/US';
     let response =  await fetch(api_url);
